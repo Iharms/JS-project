@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillbus</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">  
+    <script defer src="js/add-get-change-contacts.js"></script>
+    <script defer src="js/modal-change-inform.js"></script>
+    <script defer src="js/modal-new-client.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+   <header>
+      <div class="header-container">
+        <div class="header-logo-wrapper">
+            <a class="header-logo">
+                <picture>
+                    <source srcset="img/svg/logo-header-320px.svg" media="(max-width: 350px)">
+                    <img class="header-img" loading="lazy" src="img/svg/logo-header.svg" alt="Logo">
+                </picture>
+            </a>
+        </div>
+        <div class="header-input-wrapper">
+            <input class="header-input" type="text" placeholder="Введите запрос">
+        </div>
+      </div>
+   </header>
+   <main>
+    <div class="delete-modal-container">
+      <div class="modal-delete-client-overlay">
+        <div class="modal-tools-delete">
+          <button class="modal-cross-delete btn-reset">
+            <svg class="close-modal-svg" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2333 7.73333L21.2666 6.76666L14.4999 13.5334L7.73324 6.7667L6.76658 7.73336L13.5332 14.5L6.7666 21.2667L7.73327 22.2333L14.4999 15.4667L21.2666 22.2334L22.2332 21.2667L15.4666 14.5L22.2333 7.73333Z" fill="#B0B0B0"></path>
+        </svg>
+      </button>
+      <h3 class="modal-tittle-delete">Удалить клиента</h3>
+      <p class="modal-text-delete">Вы действительно хотите удалить данного клиента?</p>
+      <button class="modal-btn-delete btn-reset">Удалить</button>
+      <button class="modal-cancel-delete btn-reset">Отмена</button>
+    </div>
+  </div>
+    </div>
+    <div class="modal-new-client-overlay">
+    <div class="modal-new-client">
+     <button class="close-modal-btn btn-reset">
+       <svg class="close-modal-svg" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2333 7.73333L21.2666 6.76666L14.4999 13.5334L7.73324 6.7667L6.76658 7.73336L13.5332 14.5L6.7666 21.2667L7.73327 22.2333L14.4999 15.4667L21.2666 22.2334L22.2332 21.2667L15.4666 14.5L22.2333 7.73333Z" fill="#B0B0B0"/>
+         </svg>
+     </button>
+      <h2 class="modal-tittle modal-new-client-tittle">
+       Новый клиент
+      </h2>
+      <form action="#">
+       <div class="form-group">
+         <label class="form-label" for="first">Имя<span class="star-color">*</span></label>
+         <input id="first" class="form-input" type="text" />
+       </div>
+       <div class="form-group">
+         <label class="form-label" for="last">Фамилия<span class="star-color">*</span></label>
+         <input id="last" class="form-input" type="text" />
+       </div>
+       <div class="form-group">
+         <label class="form-label" for="color">Отчество</label>
+         <input id="color" class="form-input" type="text" />
+       </div>
+         <div class="contacts-add-wrapper">
+           <div class="contacts-add-container"></div>
+             <button class="btn-reset contacts-btn js-add-contact-btn">
+               <svg class="contacts-btn-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M8.00001 4.66659C7.63334 4.66659 7.33334 4.96659 7.33334 5.33325V7.33325H5.33334C4.96668 7.33325 4.66668 7.63325 4.66668 7.99992C4.66668 8.36659 4.96668 8.66659 5.33334 8.66659H7.33334V10.6666C7.33334 11.0333 7.63334 11.3333 8.00001 11.3333C8.36668 11.3333 8.66668 11.0333 8.66668 10.6666V8.66659H10.6667C11.0333 8.66659 11.3333 8.36659 11.3333 7.99992C11.3333 7.63325 11.0333 7.33325 10.6667 7.33325H8.66668V5.33325C8.66668 4.96659 8.36668 4.66659 8.00001 4.66659ZM8.00001 1.33325C4.32001 1.33325 1.33334 4.31992 1.33334 7.99992C1.33334 11.6799 4.32001 14.6666 8.00001 14.6666C11.68 14.6666 14.6667 11.6799 14.6667 7.99992C14.6667 4.31992 11.68 1.33325 8.00001 1.33325ZM8.00001 13.3333C5.06001 13.3333 2.66668 10.9399 2.66668 7.99992C2.66668 5.05992 5.06001 2.66659 8.00001 2.66659C10.94 2.66659 13.3333 5.05992 13.3333 7.99992C13.3333 10.9399 10.94 13.3333 8.00001 13.3333Z" fill="#9873FF"/>
+                 </svg>
+                 <span class="contacts-btn-text">Добавить контакт</span>
+             </button>
+         </div>
+         <div class="modal-btn-wrapper flex">
+           <button class="save-modal-btn btn-reset">Сохранить</button>
+           <button class="cancel-modal-btn btn-reset">Отмена</button>
+         </div>
+      </form>
+
+    </div>
+  </div>
+  <div class="clients-container">
+    <div class="modal-change-client-overlay"></div>
+  </div>
+     <div class="container">
+        <h1 class="main-tittle">Клиенты</h1>
+        <table class="clientsTable table table-settings">
+            <thead>
+                <th class="table-string-header" data-column="id">
+                    <span class="colum-text">ID</span>
+                    <svg class="colum-svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.49691e-07 4L0.705 4.705L3.5 1.915L3.5 8L4.5 8L4.5 1.915L7.29 4.71L8 4L4 -3.49691e-07L3.49691e-07 4Z" fill="#9873FF"/>
+                    </svg>
+                </th>
+                <th class="table-string-header" data-column="surname">
+                    <span class="colum-text">Фамилия Имя Отчество</span>
+                    <svg class="colum-svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.49691e-07 4L0.705 4.705L3.5 1.915L3.5 8L4.5 8L4.5 1.915L7.29 4.71L8 4L4 -3.49691e-07L3.49691e-07 4Z" fill="#9873FF"/>
+                    </svg>
+                    <span class="colum-surname-alphabet"><span class="first-letter">А</span>-<span class="last-letter">Я</span></span> 
+                    <!-- <svg class="colum-svg-alphabet" width="16" height="8" viewиox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.37109 8L4.6582 6.01758H1.92871L1.23047 8H0L2.6709 0.832031H3.94043L6.61133 8H5.37109ZM4.35059 5.01172L3.68164 3.06836C3.63281 2.93815 3.56445 2.73307 3.47656 2.45312C3.39193 2.17318 3.33333 1.9681 3.30078 1.83789C3.21289 2.23828 3.08431 2.67611 2.91504 3.15137L2.27051 5.01172H4.35059ZM6.96289 5.80762V4.83105H9.47266V5.80762H6.96289ZM13.0322 5.13867L11.2646 8H9.93164L11.9434 4.87012C11.0319 4.55436 10.5762 3.8903 10.5762 2.87793C10.5762 2.22363 10.8024 1.72396 11.2549 1.37891C11.7074 1.03385 12.373 0.861328 13.252 0.861328H15.3955V8H14.2236V5.13867H13.0322ZM14.2236 1.83789H13.2959C12.8044 1.83789 12.4268 1.92578 12.1631 2.10156C11.9027 2.27409 11.7725 2.55729 11.7725 2.95117C11.7725 3.33529 11.8994 3.63477 12.1533 3.84961C12.4072 4.06445 12.8011 4.17188 13.335 4.17188H14.2236V1.83789Z" fill="#9873FF"/>
+                    </svg> -->
+                </th>
+                <th class="table-string-header" data-column="createdAt">
+                    <span class="colum-text">Дата и время создания</span>
+                    <svg class="colum-svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.49691e-07 4L0.705 4.705L3.5 1.915L3.5 8L4.5 8L4.5 1.915L7.29 4.71L8 4L4 -3.49691e-07L3.49691e-07 4Z" fill="#9873FF"/>
+                    </svg>
+                </th>
+                <th class="table-string-header" data-column="updatedAt">
+                    <span class="colum-text">Последние изменения</span>
+                    <svg class="colum-svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.49691e-07 4L0.705 4.705L3.5 1.915L3.5 8L4.5 8L4.5 1.915L7.29 4.71L8 4L4 -3.49691e-07L3.49691e-07 4Z" fill="#9873FF"/>
+                    </svg>
+                </th>
+                <th class="table-string-header">
+                    <span class="colum-text">Контакты</span>
+                </th>
+                <th class="table-string-header">
+                    <span class="colum-text">Действия</span>
+                </th>
+            </thead>
+            <tbody id="clients-list">
+
+            </tbody>
+        </table>
+        <div class="main-btn-wrapper">
+          <button class="btn-reset main-btn js-btn-new-add">
+            <svg class="main-btn-svg" width="23" height="16" viewbox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+              </svg>
+            <span class="btn-text">
+              Добавить клиента
+            </span>
+          </button>
+        </div>
+     </div>
+
+   </main>
+
+
+</body>
+</html>
